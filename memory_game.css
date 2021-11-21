@@ -1,0 +1,108 @@
+/* header display */
+#header{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+}
+
+#header #title{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header #title img{
+  max-width: 4%;
+  margin: 7px;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+#header .tried {
+  margin-top: 0;
+}
+
+
+/* card display */
+#cards{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.card{
+  flex: 7% 1 1;
+  height: 8vw;
+  border: 2px solid rgb(39, 2, 8);
+  margin: 2px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img{
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p{
+  margin: 1px 3px;
+  font-size: 16px;
+}
+
+.card p:last-child{
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+
+/* interaction */
+.back{
+  background: url(https://i.imgur.com/X5nacsZ.png);
+  background-size: cover;
+}
+
+.match{
+  background: rgb(192, 196, 189);
+}
+
+.failed{
+  animation-name: failedAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes failedAnimation{
+  100%{
+    border:2px solid rgb(181, 255, 152);
+  }
+}
+
+
+/** Game finished **/
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+.completed > p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+.completed > p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
